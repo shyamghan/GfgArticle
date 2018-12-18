@@ -1,3 +1,10 @@
+window.addEventListener("beforeunload", function (event) {
+  // Cancel the event as stated by the standard.
+  event.preventDefault();
+  // Chrome requires returnValue to be set.
+  event.returnValue = '';
+});
+
 function getExamples() {
   var input1 = document.getElementById("input1").value;
   var input2 = document.getElementById("input2").value;
